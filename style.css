@@ -1,49 +1,129 @@
-header {
+* 
+{ 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body 
+{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header and nav styling */
+header 
+{
     position: fixed;
     top: 0;
     width: 100%;
-    height: 60px;
+    height: 70px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
     z-index: 1000;
-    background: linear-gradient(270deg, #6b46c1, #805ad5, #d6bcfa);
-    background-size: 400% 400%;
-    animation: gradientShift 10s ease infinite;
 }
 
-nav ul {
+/* Horizontal nav tabs */
+nav ul 
+{
+    list-style: none;
     display: flex;
     justify-content: center;
     gap: 20px;
     padding: 0;
     margin: 0;
-    width: fit-content;
 }
 
-nav ul li a {
+/* Glowing gradient pill tabs */
+nav ul li a 
+{
+    position: relative;
     display: inline-block;
-    padding: 10px 25px;
-    text-decoration: none;
-    color: #ffffff; /* readable */
+    padding: 12px 28px;
     font-weight: 600;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    border-radius: 30px; /* pill-shaped tabs */
+    text-decoration: none;
+    color: #fff; /* readable text */
+    background: linear-gradient(270deg, #a855f7, #c084fc, #f472b6);
+    background-size: 600% 600%;
     transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(168,85,247,0.3);
+    animation: gradientShift 8s ease infinite; /* always lively */
 }
 
-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 0 10px rgba(255,255,255,0.4);
+/* Hover effect: glow and lift */
+nav ul li a:hover 
+{
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(168,85,247,0.6), 0 0 25px rgba(244,114,182,0.4);
 }
 
-nav ul li a.active {
-    background: rgba(255, 255, 255, 0.4);
+/* Active tab highlight */
+nav ul li a.active 
+{
+    background: linear-gradient(270deg, #9333ea, #a855f7, #c084fc);
+    box-shadow: 0 0 25px rgba(168,85,247,0.8);
 }
 
-@keyframes gradientShift {
+/* Gradient animation keyframes */
+@keyframes gradientShift 
+{
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+/* Container */
+.container 
+{
+    margin-top: 120px; /* spacing below fixed header */
+    padding: 40px 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 
+{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn 
+{
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar 
+{ 
+    width: 10px; 
+}
+
+::-webkit-scrollbar-track 
+{ 
+    background: #0a0a0a; 
+}
+
+::-webkit-scrollbar-thumb 
+{ 
+    background: linear-gradient(180deg, #a855f7, #c084fc);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover 
+{ 
+    background: #9333ea; 
 }

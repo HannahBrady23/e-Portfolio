@@ -7,47 +7,39 @@ header {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    background: linear-gradient(270deg, #a855f7, #c084fc, #f472b6, #facc15);
-    background-size: 600% 600%;
-    animation: gradientShift 8s ease infinite;
-}
-
-nav {
-    width: 100%;
+    background: linear-gradient(270deg, #6b46c1, #805ad5, #d6bcfa);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 20px;
     padding: 0;
     margin: 0;
     width: fit-content;
 }
 
 nav ul li a {
-    position: relative;
     display: inline-block;
     padding: 10px 25px;
+    text-decoration: none;
+    color: #ffffff; /* readable */
     font-weight: 600;
     border-radius: 30px;
-    color: #1f1f1f;
-    background: linear-gradient(270deg, #a855f7, #f472b6, #facc15, #c084fc);
-    background-size: 400% 400%;
+    background: rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
-    animation: gradientShift 6s linear infinite; /* always lively */
 }
 
 nav ul li a:hover {
-    color: #fff;
-    box-shadow: 0 0 20px rgba(168,85,247,0.5), 0 0 25px rgba(244,114,182,0.4);
+    background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(255,255,255,0.4);
 }
 
 nav ul li a.active {
-    color: #fff;
-    background: rgba(168,85,247,0.7);
-    box-shadow: 0 0 20px rgba(168,85,247,0.6), 0 0 25px rgba(244,114,182,0.5);
+    background: rgba(255, 255, 255, 0.4);
 }
 
 @keyframes gradientShift {

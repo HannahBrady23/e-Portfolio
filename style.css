@@ -38,6 +38,7 @@ nav ul
     gap: 20px;
     padding: 0;
     margin: 0;
+    width: auto;
 }
 
 /* Glowing gradient pill tabs */

@@ -113,6 +113,20 @@ nav ul li a.active
     color: #cccccc;
 }
 
+.project-links a
+{
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #ae3cf0;
+    font-weight: bold;
+}
+
+.project-links a:hover
+{
+    text-decoration: underline;
+}
+
 h2 
 {
     text-align: left;

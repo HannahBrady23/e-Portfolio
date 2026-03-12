@@ -92,6 +92,8 @@ nav ul li a.active
     margin-right: auto;
     display:grid;
     margin-bottom:20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
    
 }
 
@@ -104,6 +106,8 @@ nav ul li a.active
     margin-right: auto;
     display:grid;
     margin-bottom:20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
    
 }
 .skills-container 
@@ -115,6 +119,8 @@ nav ul li a.active
     margin-right: auto;
     display:grid;
     margin-bottom:20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
    
 }
 

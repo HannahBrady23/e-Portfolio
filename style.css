@@ -152,6 +152,20 @@ nav ul li a.active
     transform: scale(1.2);
 }
 
+.experience-list
+{
+    margin-left: 18px;
+    margin-top: 10px;
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.experience-list li
+{
+    margin-bottom: 8px;
+}
+
 h2 
 {
     text-align: left;

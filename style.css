@@ -146,6 +146,12 @@ nav ul li a.active
     display: inline-block;
 }
 
+.social-links a:hover
+{
+    color: #a855f7;
+    transform: scale(1.2);
+}
+
 h2 
 {
     text-align: left;
